@@ -29,7 +29,7 @@ app.use(bodyparser.urlencoded({ extended: false }))
  * Server Activation
 */
 const server = app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
+    console.log(`Server started - Listening on port ${PORT}`);
 });
 
 /**
