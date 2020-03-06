@@ -8,23 +8,23 @@ module.exports = {
     target: 'node',
     externals: [
         nodeExternals({
-            whitelist: ['webpack/hot/poll?100']
-        })
+            whitelist: ['webpack/hot/poll?100'],
+        }),
     ],
     module: {
         rules: [{
-                test: /.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
-            }]
+            test: /.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/,
+        }],
     },
     mode: 'development',
     resolve: {
-        extensions: [".tsx", ".ts", ".js"]
+        extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [new webpack.HotModuleReplacementPlugin()],
     output: {
-        path: path.join(__dirname, "dist"),
-        filename: "index.js"
-    }
+        path: path.join(__dirname, 'dist', 'src'),
+        filename: 'server.js',
+    },
 }

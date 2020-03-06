@@ -3,6 +3,7 @@ import { Application } from 'express'
 
 class App {
     public app: Application
+
     public port: number
 
     constructor(appInit: { port: number; middleWares: any; routes: any; }) {
@@ -16,14 +17,14 @@ class App {
     }
 
     private middlewares(middleWares: { forEach: (arg0: (middleWare: any) => void) => void; }) {
-        middleWares.forEach(middleWare => {
+        middleWares.forEach((middleWare) => {
             this.app.use(middleWare)
         })
     }
 
     private routes(routes: { forEach: (arg0: (route: any) => void) => void; }) {
-        routes.forEach(route => {
-            this.app.use('/', route)
+        routes.forEach((route) => {
+            this.app.use('/api', route)
         })
     }
 

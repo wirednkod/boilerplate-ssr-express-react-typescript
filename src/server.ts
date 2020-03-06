@@ -1,29 +1,28 @@
-import App from './app'
-
 import * as dotenv from 'dotenv'
 import * as bodyParser from 'body-parser'
 import * as cors from 'cors'
 import * as helmet from 'helmet'
 import loggerMiddleware from './middleware/logger'
 import BasicRouter from './routers/basic'
+import App from './app'
 
 dotenv.config()
 
 const app = new App({
-    port: parseInt(process.env.PORT, 10) || 8000,
+    port: parseInt(process.env.PORT || '8000', 10),
     middleWares: [
         bodyParser.json(),
         bodyParser.urlencoded({ extended: false }),
         cors(),
         helmet(),
-        loggerMiddleware
+        loggerMiddleware,
     ],
     routes: [
-        BasicRouter
-    ]
+        BasicRouter,
+    ],
 })
 
-const server = app.listen()
+app.listen()
 
 type ModuleId = string | number;
 
@@ -40,7 +39,8 @@ interface WebpackHotModule {
     };
 }
 
-declare const module: WebpackHotModule;
+declare const module: WebpackHotModule
+
 if (module.hot) {
     module.hot.accept()
 }

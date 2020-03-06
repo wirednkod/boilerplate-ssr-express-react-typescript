@@ -6,7 +6,6 @@
         "node": true
     },
     "extends": [
-        "prettier",
         "airbnb-base"
     ],
     "globals": {
@@ -18,10 +17,13 @@
         "ecmaVersion": 2018
     },
     "plugins": [
-        "@typescript-eslint",
-        "prettier"
+        "@typescript-eslint"
     ],
     "rules": {
-        "prettier/prettier": "error"
+        "indent": ["error", 4],
+        "semi": ["error", "never"],
+        "no-console": "off",
+        "import/extensions": "off",
+        "import/no-unresolved": "off"
     }
 }

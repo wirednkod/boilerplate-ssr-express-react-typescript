@@ -1,31 +1,29 @@
 {
     "compilerOptions": {
-        "sourceMap": true,
-        "target": "es6",
-        "module": "commonjs",
-        "outDir": "./dist",
-        "baseUrl": "./  ",
-        "allowJs": true,
-        "skipLibCheck": true,
-        // "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        // "noEmit": true,
-        "jsx": "react",
+        "target": "es5",
         "lib": [
             "dom",
             "dom.iterable",
             "esnext"
-        ]
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react",
+        "outDir": "./dist",
+        "baseUrl": "./src"
     },
     "include": [
-        "src/**/*.ts",
-        "client/src/**/*.ts",
-        "client/src/**/*.tsx"
+        "client",
+        "src/**/*.ts"
     ],
     "exclude": [
         "node_modules"
