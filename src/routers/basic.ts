@@ -12,7 +12,7 @@ class BasicRouter {
 
     public initRoutes() {
         this.router.get('/', (req: Request, res: Response) => {
-            res.send({ success: true, data: 'ok' })
+            res.send({ success: true, data: 'osdk' })
         })
     }
 }
