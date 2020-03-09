@@ -6,8 +6,8 @@
   "scripts": {
     "init": "npm i && cd client && npm i",
     "start": "concurrently --kill-others \"npm run build && node ./dist/src/server\" \"cd client && npm start\"",
-    "dev": "concurrently --kill-others \"cd client && npm start\" \"webpack --config webpack.config.ts\"",
-    "dev:server": "concurrently --kill-others \"webpack --config webpack.config.ts\" \"node dist/src/server.js\"",
+    "dev": "concurrently --kill-others \"cd client && npm start\" \"nodemon\"",
+    "dev:server": "nodemon",
     "dev:client": "cd client && npm start",
     "build": "rm -rf ./dist && tsc -p .",
     "clean": "rm -rf dist",
@@ -36,9 +36,6 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-node-externals": "^1.7.2"
+    "typescript": "^3.8.3"
   }
 }
