@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "init": "npm i && cd client && npm i",
-    "start": "concurrently --kill-others \"npm run build && node ./dist/src/server\" \"cd client && npm start\"",
-    "dev": "concurrently --kill-others \"cd client && npm start\" \"nodemon\"",
+    "init": "yarn && cd client && yarn",
+    "start": "concurrently --kill-others \"yarn run build && node ./dist/src/server\" \"cd client && yarn start\"",
+    "dev": "concurrently --kill-others \"cd client && yarn start\" \"nodemon\"",
     "dev:server": "nodemon",
-    "dev:client": "cd client && npm start",
+    "dev:client": "cd client && yarn start",
     "build": "rm -rf ./dist && tsc -p .",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
