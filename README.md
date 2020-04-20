@@ -10,24 +10,24 @@ An up-to-date boilerplate for running server(node/express) and client code (Reac
 - ESLinter 
 
 ### Initial setup
-    npm run init
+    yarn run init
         Runs all needed commands to install server and client modules
 
 ### Scripts
-    npm start
+    yarn start
       Builds and starts the server serving api and static files (production)
 
-    npm run dev
+    yarn run dev
       Starts the server serving api and react files (hot reload)
 
-    npm run dev:server  
+    yarn run dev:server  
       Starts only the api server
 
-    npm run dev:client
+    yarn run dev:client
       Starts only React
 
-    npm run build
+    yarn run build
       Builds the TS
 
-    npm run clean
+    yarn run clean
       Removes build files
